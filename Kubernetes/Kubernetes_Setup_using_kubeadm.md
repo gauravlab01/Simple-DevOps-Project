@@ -94,6 +94,8 @@ If not then vi /etc/docker/daemon.json
 
 }
 
+reference - https://stackoverflow.com/questions/52119985/kubeadm-init-shows-kubelet-isnt-running-or-healthy
+
 1. Initialize Kubernetes Cluster
     ```sh
     kubeadm init --apiserver-advertise-address=<MasterServerIP> --pod-network-cidr=192.168.0.0/16
