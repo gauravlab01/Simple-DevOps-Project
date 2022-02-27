@@ -87,14 +87,14 @@ This documentation guides you in setting up a cluster with one master node and t
 check file /etc/docker/daemon.json exist or not
 
 If not then vi /etc/docker/daemon.json
-
+```sh
 {
-
     "exec-opts": ["native.cgroupdriver=systemd"]
-
 }
+```
 
 reference - https://stackoverflow.com/questions/52119985/kubeadm-init-shows-kubelet-isnt-running-or-healthy
+
 
 1. Initialize Kubernetes Cluster
     ```sh
