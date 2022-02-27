@@ -84,6 +84,15 @@ This documentation guides you in setting up a cluster with one master node and t
     systemctl start kubelet
     ```
 ## `On Master Node:`
+check file /etc/docker/daemon.json exist or not
+
+If not then vi /etc/docker/daemon.json
+=====
+{
+    "exec-opts": ["native.cgroupdriver=systemd"]
+}
+=====
+
 1. Initialize Kubernetes Cluster
     ```sh
     kubeadm init --apiserver-advertise-address=<MasterServerIP> --pod-network-cidr=192.168.0.0/16
